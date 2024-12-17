@@ -544,7 +544,7 @@ require('lazy').setup({
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
-        --
+        cssls = {},
         -- But for many setups, the LSP (`tsserver`) will work just fine
         tsserver = {},
         --
@@ -624,8 +624,9 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
-        -- is found.
+        css = { 'prettier' },
         javascipt = { 'prettier' },
+        rust = { 'rustfmt' },
         -- javascript = { { "prettierd", "prettier" } },
       },
     },
@@ -798,7 +799,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'cpp', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'rust' },
+      ensure_installed = { 'bash', 'c', 'cpp', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'rust', 'css' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
